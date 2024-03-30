@@ -1,0 +1,94 @@
+.filter {
+    @include media($lg) {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__title {
+        color: darkred;
+        font-size: 40px;
+        line-height: 50px;
+        font-family: $rb;
+        margin: 30px 0;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 80%;
+        background: rgb(0, 0, 0);
+        gap: 15px;
+        padding: 20px;
+        border-radius: 20px;
+
+        &-title {
+            font-size: 25px;
+            font-family: $rm;
+            color: white;
+            line-height: 45px;
+            height: 32px;
+            margin-bottom: 20px;
+
+            @include media($lg) {
+                font-size: 25px;
+                line-height: 35px;
+            }
+
+            @include media($md) {
+                font-size: 25px;
+                line-height: 30px;
+            }
+
+            @include media($sm) {
+                font-size: 25px;
+                line-height: 25px;
+            }
+
+            @include media($xs) {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+
+        &-img {
+            max-width: 350px;
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        &-text {
+            color: white;
+            font-size: 22px;
+            line-height: 28px;
+            font-family: $rr;
+
+            @include media($sm) {
+                font-size: 18px;
+                line-height: 24px;
+            }
+        }
+
+        &-btn {
+            font-size: 20px;
+            line-height: 30px;
+            font-family: $rm;
+            background: blueviolet;
+            padding: 10px 15px;
+            color: white;
+            border-radius: 10px;
+            display: block;
+            width: max-content;
+            margin: 0 auto;
+
+            @include media($sm) {
+                font-size: 15px;
+                line-height: 20px;
+                padding: 5px 10px;
+            }
+        }
+    }
+}

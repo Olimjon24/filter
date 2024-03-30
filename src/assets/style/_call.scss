@@ -1,0 +1,82 @@
+.call__btn {
+    animation: animate_pulse2 2s infinite;
+    border-radius: 100px;
+}
+
+.call__btn-block,
+.call__btn-element,
+.call__btn-rotate {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.call__btn-element {
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.call__btn-block {
+    background: #00BD15;
+    position: relative;
+    transition: .5s;
+}
+
+.call__btn-rotate {
+    font-size: 28px;
+    line-height: 70px;
+    animation: phone .9s ease-in-out infinite;
+}
+
+.icon__call::after {
+    content: "\f879";
+    font-size: 30px;
+    color: white;
+    font-weight: 901;
+}
+
+@keyframes phone {
+    0%,
+    100% {
+        transform: rotate(-20deg);
+    }
+
+    50% {
+        transform: rotate(21deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+
+}
+
+@keyframes animate_pulse2 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 189, 31, 0.67);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(0, 189, 31, 0.27);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 189, 31, 0.17);
+    }
+}

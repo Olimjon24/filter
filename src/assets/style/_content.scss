@@ -1,0 +1,82 @@
+.content {
+    gap: 30px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__title {
+        // z-index: 9;
+        color: black;
+        margin-top: 40px;
+        font-size: 50px;
+        line-height: 65px;
+        font-family: $rb;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 40px;
+
+        &-card {
+            gap: 20px;
+            max-width: 350px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+            // border: 2px solid rgb(125, 115, 63);
+            border-radius: 20px;
+            transition: all 0.8s;
+            img{
+                border-radius: 30px;
+                height: 100%;
+            }
+
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+.card__img {
+    max-width: 350px;
+    width: 100%;
+}
+
+.card__text {
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 30px;
+    font-family: $rr;
+    text-transform: uppercase;
+}
+
+.card__desc {
+    padding: 15px;
+    font-family: $rr;
+    color: black;
+    font-size: 20px;
+    text-align: start;
+}
+
+.airfilter__desc {
+    color: white;
+    font-size: 20px;
+    line-height: 30px;
+    font-family: $rr;
+    padding: 8px 15px;
+    background: rgba(55, 55, 205, 0.5);
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px,
+        rgba(240, 46, 170, 0.3) 10px 10px,
+        rgba(240, 46, 170, 0.2) 15px 15px,
+        rgba(240, 46, 170, 0.1) 20px 20px,
+        rgba(240, 46, 170, 0.05) 25px 25px;
+}

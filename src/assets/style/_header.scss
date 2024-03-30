@@ -1,0 +1,84 @@
+.container {
+    @include container()
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    &__content {
+        position: relative;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+            z-index: -1;
+        }
+        &-title {
+            color: black;
+            font-size: 70px;
+            line-height: 65px;
+            font-family: $rbl;
+            @include media($lg){
+                font-size: 40px;
+                line-height: 40px;
+            }
+            @include media($sm){
+                font-size: 35px;
+                line-height: 40px;
+            }
+            @include media($xs){
+                font-size: 30px;
+                line-height: 35px;
+            }
+        }
+        &-text {
+            font-size: 25px;
+            line-height: 40px;
+            font-family: $rr;
+            margin: 30px 0;
+            color: black;
+            @include media($sm) {
+                font-size: 20px;
+                line-height: 30px;
+                margin-top: 20px;
+            }
+            @include media($xs) {
+                font-size: 15px;
+                line-height: 20px;
+                margin-top: 20px;
+            }
+        }
+        &-btn {
+            color: white;
+            background: rgb(50, 5, 5);
+            font-size: 25px;
+            line-height: 30px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: $rm;
+            @include media($sm){
+                padding: 5px 12px;
+                font-size: 15px;
+            }
+        }
+        &-opacity {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: rgba(50, 5, 5, 0.5);
+            z-index: -1;
+        }
+    }
+}

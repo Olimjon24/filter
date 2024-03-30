@@ -1,0 +1,53 @@
+$rr: "rr";
+$rm: "rm";
+$rb: "rb";
+$rbl: "rbl";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    list-style: none;
+    &:focus {
+        border: none;
+        outline: none;
+    }
+    &::before, &::after {
+        font-family: 'Font Awesome';
+    }
+}
+html , body{
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+img {
+    display: block;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+}
+
+.router-view {
+    order: -1;
+}
+
+@import "grid";
+@import "fonts";
+@import "header";
+@import "navbar";
+@import "filters";
+@import "button";
+@import "carousel";
+@import "content";
+@import "footer";
+@import "call";
